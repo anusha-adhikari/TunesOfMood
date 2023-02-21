@@ -84,11 +84,11 @@ class EmotionProcessor:
         return av.VideoFrame.from_ndarray(frm, format="bgr24")
 
 
-st.title("Want to listen to songs that resonate with your mood? Look no further! Tell us how you feel through your webcam!")
-st.title("Smile -> happy")
-st.title(":Sign of the Horns: -> energetic")
-st.title(":OK Hand: -> calm")
-st.title(":Thumbs Down: -> sad")
+st.caption("Want to listen to songs that resonate with your mood? Look no further! Tell us how you feel through your webcam!")
+st.caption("Smile -> happy")
+st.caption("Rock on (hand sign) -> energetic")
+st.caption(":ok_hand: -> calm")
+st.caption(":thumbsdown: -> sad")
     
 webrtc_streamer(key="key", desired_playing_state=True,
             video_processor_factory=EmotionProcessor, rtc_configuration=RTCConfiguration(
