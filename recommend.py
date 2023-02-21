@@ -110,25 +110,25 @@ if btn:
             #making a dataset of energetic songs
             st.text_area("Energetic")
             energetic = dataset[(dataset['energy'] >= 0.5) & (dataset['energy'] <= 1.0)]
-            st.dataframe(energetic.sample(frac = 0.1).reset_index())
+            st.dataframe(energetic.sample(n = 30).reset_index())
 
         elif(textDict[emotion] == 2):
             #making  a dataset of happy songs
             st.text_area("\nHappy")
             happy = dataset[dataset['valence'] >= 0.5]
-            st.dataframe(happy.sample(frac = 0.1).reset_index())
+            st.dataframe(happy.sample(n = 30).reset_index())
 
         elif(textDict[emotion] == 3):
             #making a dataset of calm songs
             st.text_area("\nCalm")
             calm = dataset[(dataset['energy'] < 0.5) & ((dataset['valence'] >= 0.33) & (dataset['valence'] <= 0.7)) & (dataset['tempo'] <= 95)]
-            st.dataframe(calm.sample(frac = 0.1).reset_index())
+            st.dataframe(calm.sample(n = 30).reset_index())
 
         elif(textDict[emotion] == 4):
             #making a dataset of sad song
             st.text_area("\nSad")
             sad = dataset[(dataset['valence'] < 0.33)]
-            st.dataframe(sad.sample(frac = 0.1).reset_index())
+            st.dataframe(sad.sample(n = 30).reset_index())
 
         else:
             print("Sorry! I haven't felt this mood yet :( ")
