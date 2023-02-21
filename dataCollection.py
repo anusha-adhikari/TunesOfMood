@@ -45,9 +45,9 @@ while True:
         dataSize = dataSize+1
 
 
-    drawing.draw_landmarks(frm, res.face_landmarks, holistic.FACEMESH_CONTOURS) #drawing the landmarks for face
-    drawing.draw_landmarks(frm, res.left_hand_landmarks, hands.HAND_CONNECTIONS) #drawing the landmarks for left hand
-    drawing.draw_landmarks(frm, res.right_hand_landmarks, hands.HAND_CONNECTIONS) #drawing the landmarks for right hand
+    #drawing.draw_landmarks(frm, res.face_landmarks, holistic.FACEMESH_CONTOURS) #drawing the landmarks for face
+    #drawing.draw_landmarks(frm, res.left_hand_landmarks, hands.HAND_CONNECTIONS) #drawing the landmarks for left hand
+    #drawing.draw_landmarks(frm, res.right_hand_landmarks, hands.HAND_CONNECTIONS) #drawing the landmarks for right hand
 
     cv2.putText(frm, str(dataSize), (50,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0),2) #text on the webcam window to show the no.of frames taken
 
