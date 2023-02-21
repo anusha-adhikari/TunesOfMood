@@ -98,7 +98,7 @@ if btn:
         st.warning("Please let me capture your emotion first")
         st.session_state["run"] = "true"
     else:
-        dataset = pd.read_csv(spotify_songs.csv.zip.extractall())
+        dataset = pd.read_csv("spotify_songs")
         columnNames = list(dataset.columns)
         dataset = dataset.drop(columns = ['track_id', 'playlist_genre', 'key', 'track_popularity', 'track_album_id', 'track_album_name', 'track_album_release_date', 'playlist_name', 'playlist_id', 'playlist_subgenre', 'duration_ms', 'language'])
         
