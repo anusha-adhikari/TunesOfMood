@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_webrtc import webrtc_streamer, RTCConfiguration
+from streamlit_webrtc import webrtc_streamer, RTCConfiguration, WebRtcMode
 import av
 import cv2 
 import numpy as np 
@@ -94,13 +94,13 @@ st.caption("Rock on (hand sign) -> energetic")
 st.caption(":ok_hand: -> calm")
 st.caption(":thumbsdown: -> sad")
     
-webrtc_streamer(key="key", desired_playing_state=True,
+webrtc_streamer(key="example", mode=WebRtcMode.SENDRECV,
             video_processor_factory=EmotionProcessor, rtc_configuration=RTCConfiguration(
                 {"iceServers":[{"urls":["stun:stun.l.google.com:19302"]}]}
             ))
 
 btn = st.button("Recommend songs")
-stp = st.button("Stop")
+#stp = st.button("Stop")
 
 if btn:
     if not(emotion):
@@ -143,12 +143,12 @@ if btn:
             print("Sorry! I haven't felt this mood yet :( ")
             
             
-if stp:
+'''if stp:
     strt = st.button("Retake mood")
     if strt:
         st.experimental_rerun()
 
     dn = st.button("Done!")
     if dn:
-        st.stop()
+        st.stop()'''
         
