@@ -8,7 +8,7 @@ from keras.models import load_model
 #import webbrowser
 import pandas as pd
 
-@st.cache
+@st.cache(allow_output_mutation = True)
 def load():
     return load_model("model.h5")
 
