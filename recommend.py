@@ -93,13 +93,15 @@ st.caption("Smile -> happy")
 st.caption("Rock on (hand sign) -> energetic")
 st.caption(":ok_hand: -> calm")
 st.caption(":thumbsdown: -> sad")
+st.caption("Press START and the STOP to capture your emotion")
+st.caption("Now press Recommend Songs to get list of appropriate songs")
     
 webrtc_streamer(key="example", mode=WebRtcMode.SENDRECV,
             video_processor_factory=EmotionProcessor, rtc_configuration=RTCConfiguration(
                 {"iceServers":[{"urls":["stun:stun.l.google.com:19302"]}]}
             ))
 
-btn = st.button("Recommend songs")
+btn = st.button("Recommend Songs")
 #stp = st.button("Stop")
 
 if btn:
@@ -117,25 +119,25 @@ if btn:
 
         elif(textDict[emotion] == 1):
             #making a dataset of energetic songs
-            st.caption("Energetic")
+            st.text("Energetic")
             #energetic = dataset[(dataset['energy'] >= 0.5) & (dataset['energy'] <= 1.0)]
             st.dataframe(dataset[(dataset['energy'] >= 0.5) & (dataset['energy'] <= 1.0)].sample(n = 30).reset_index()[['track_name', 'track_artist', 'lyrics', 'track_album_name']])
 
         elif(textDict[emotion] == 2):
             #making  a dataset of happy songs
-            st.caption("\nHappy")
+            st.text("\nHappy")
             #happy = dataset[dataset['valence'] >= 0.5]
             st.dataframe(dataset[dataset['valence'] >= 0.5].sample(n = 30).reset_index()[['track_name', 'track_artist', 'lyrics', 'track_album_name']])
 
         elif(textDict[emotion] == 3):
             #making a dataset of calm songs
-            st.caption("\nCalm")
+            st.text("\nCalm")
             #calm = dataset[(dataset['energy'] < 0.5) & ((dataset['valence'] >= 0.33) & (dataset['valence'] <= 0.7)) & (dataset['tempo'] <= 95)]
             st.dataframe(dataset[(dataset['energy'] < 0.5) & ((dataset['valence'] >= 0.33) & (dataset['valence'] <= 0.7)) & (dataset['tempo'] <= 95)].sample(n = 30).reset_index()[['track_name', 'track_artist', 'lyrics', 'track_album_name']])
 
         elif(textDict[emotion] == 4):
             #making a dataset of sad song
-            st.caption("\nSad")
+            st.text("\nSad")
             #sad = dataset[(dataset['valence'] < 0.33)]
             st.dataframe(dataset[(dataset['valence'] < 0.33)].sample(n = 30).reset_index()[['track_name', 'track_artist', 'lyrics', 'track_album_name']])
 
