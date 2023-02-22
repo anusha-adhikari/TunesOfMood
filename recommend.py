@@ -100,6 +100,7 @@ webrtc_streamer(key="key", desired_playing_state=True,
             ))
 
 btn = st.button("Recommend songs")
+stp = st.button("Stop")
 
 if btn:
     if not(emotion):
