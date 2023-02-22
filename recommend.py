@@ -117,25 +117,25 @@ if btn:
 
         elif(textDict[emotion] == 1):
             #making a dataset of energetic songs
-            st.text_area("Energetic")
+            st.caption("Energetic")
             #energetic = dataset[(dataset['energy'] >= 0.5) & (dataset['energy'] <= 1.0)]
             st.dataframe(dataset[(dataset['energy'] >= 0.5) & (dataset['energy'] <= 1.0)].sample(n = 30).reset_index()[['track_name', 'track_artist', 'lyrics', 'track_album_name']])
 
         elif(textDict[emotion] == 2):
             #making  a dataset of happy songs
-            st.text_area("\nHappy")
+            st.caption("\nHappy")
             #happy = dataset[dataset['valence'] >= 0.5]
             st.dataframe(dataset[dataset['valence'] >= 0.5].sample(n = 30).reset_index()[['track_name', 'track_artist', 'lyrics', 'track_album_name']])
 
         elif(textDict[emotion] == 3):
             #making a dataset of calm songs
-            st.text_area("\nCalm")
+            st.caption("\nCalm")
             #calm = dataset[(dataset['energy'] < 0.5) & ((dataset['valence'] >= 0.33) & (dataset['valence'] <= 0.7)) & (dataset['tempo'] <= 95)]
             st.dataframe(dataset[(dataset['energy'] < 0.5) & ((dataset['valence'] >= 0.33) & (dataset['valence'] <= 0.7)) & (dataset['tempo'] <= 95)].sample(n = 30).reset_index()[['track_name', 'track_artist', 'lyrics', 'track_album_name']])
 
         elif(textDict[emotion] == 4):
             #making a dataset of sad song
-            st.text_area("\nSad")
+            st.caption("\nSad")
             #sad = dataset[(dataset['valence'] < 0.33)]
             st.dataframe(dataset[(dataset['valence'] < 0.33)].sample(n = 30).reset_index()[['track_name', 'track_artist', 'lyrics', 'track_album_name']])
 
