@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_webrtc import webrtc_streamer, RTCConfiguration, WebRtcMode
+from streamlit_webrtc import webrtc_streamer, WebRtcMode #RTCConfiguration, 
 import av
 import cv2 
 import numpy as np 
@@ -97,9 +97,9 @@ st.caption("Press START and the STOP to capture your emotion")
 st.caption("Now press Recommend Songs to get list of appropriate songs")
     
 webrtc_streamer(key="example", mode=WebRtcMode.SENDRECV,
-            video_processor_factory=EmotionProcessor, rtc_configuration=RTCConfiguration(
-                {"iceServers":[{"urls":["stun:stun.l.google.com:19302"]}]}
-            ))
+            video_processor_factory=EmotionProcessor)
+
+#rtc_configuration=RTCConfiguration({"iceServers":[{"urls":["stun:stun.l.google.com:19302"]}]})
 
 btn = st.button("Recommend Songs")
 #stp = st.button("Stop")
