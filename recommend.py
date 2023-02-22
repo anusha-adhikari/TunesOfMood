@@ -8,7 +8,11 @@ from keras.models import load_model
 #import webbrowser
 import pandas as pd
 
-model  = load_model("model.h5")
+@st.cache
+def load():
+    return load_model("model.h5")
+
+model  = load()
 label = np.load("labels.npy")
 holistic = mp.solutions.holistic
 hands = mp.solutions.hands
