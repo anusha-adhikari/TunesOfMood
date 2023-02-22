@@ -141,14 +141,7 @@ if btn:
 
         else:
             print("Sorry! I haven't felt this mood yet :( ")
+            pass
             
             
-'''if stp:
-    strt = st.button("Retake mood")
-    if strt:
-        st.experimental_rerun()
-
-    dn = st.button("Done!")
-    if dn:
-        st.stop()'''
         
