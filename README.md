@@ -22,3 +22,4 @@ Song Recommendation based on expression / gestures
 <img width="1440" alt="Screenshot 2023-07-06 at 7 38 08 PM" src="https://github.com/anusha-adhikari/TunesOfMood/assets/74814765/c58b6753-62e6-402e-bc1d-a05c2fdd05c7">
 
 # List of songs collected for “energetic”:
+<img width="1438" alt="Screenshot 2023-07-06 at 7 44 53 PM" src="https://github.com/anusha-adhikari/TunesOfMood/assets/74814765/085f5efb-1c62-46ed-8862-54e47d4579c9">
