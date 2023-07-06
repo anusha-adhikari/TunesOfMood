@@ -32,5 +32,6 @@ Song Recommendation based on expression / gestures
 
 # Challenges faced (ML background) :
 1)  Forced to establish a user interface within a night, due to unforseen circumstances.
-2)  Adapted to situation quickly and was able to create a local interface.
+2)  Unstable server connection on streamlit
+3)  Adapted to situation quickly and was able to create a local interface.
 
