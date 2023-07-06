@@ -23,3 +23,14 @@ Song Recommendation based on expression / gestures
 
 # List of songs collected for “energetic”:
 <img width="1438" alt="Screenshot 2023-07-06 at 7 44 53 PM" src="https://github.com/anusha-adhikari/TunesOfMood/assets/74814765/085f5efb-1c62-46ed-8862-54e47d4579c9">
+
+# Files Explained :
+1) dataCollection.py - To collect the moods/gestures (data) using mediapipe framework with corresponding labels.
+2) dataTraining.py - To train the model with moods/gestures and corresponding labels using keras’ models.Model, compile, fit, layers.Input, layers.Dense
+3) recommend.py - Using Streamlit to create a user interface (local) and to recommend songs depending on the mood/gesture detected. Songs were recommended using conditions for different moods.
+4) .npy - dataset for each expression/gesture (400 images)
+
+# Challenges faced (ML background) :
+1)  Forced to establish a user interface within a night, due to unforseen circumstances.
+2)  Adapted to situation quickly and was able to create a local interface.
+
