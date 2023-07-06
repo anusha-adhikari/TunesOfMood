@@ -1,5 +1,5 @@
 # TunesOfMood
-Song Recommendation based on moods
+Song Recommendation based on expression / gestures
 
 😀 Smile -> happy
 
